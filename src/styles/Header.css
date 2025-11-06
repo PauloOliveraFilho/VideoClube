@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+  header {
+    @apply flex w-100;
+  }
+
+  .header-options {
+    @apply flex p-1;
+  }
+}

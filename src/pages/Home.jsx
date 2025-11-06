@@ -1,10 +1,13 @@
+import Header from "../componentes/Header";
 import "../styles/Home.css";
 
 function Home() {
   return (
     <main className="home-page">
       {/* Espaço reservado para Header */}
-      <div className="header-spacer" />
+      <div className="header-spacer">
+        <Header />
+      </div>
 
       <div className="home-container">
         {/* Campo de busca */}

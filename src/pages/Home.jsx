@@ -65,9 +65,6 @@ function Home() {
           </div>
         </section>
       </div>
-
-      {/* Espaço reservado para Footer */}
-      <div className="footer-spacer" />
     </main>
   );
 }

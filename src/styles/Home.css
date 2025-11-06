@@ -1,41 +1,38 @@
 @import "tailwindcss";
 
 @layer components {
-  /* Layout geral da Home */
   .home-page {
-    @apply min-h-screen bg-black text-white pt-20 pb-24;
+    @apply min-h-screen pt-20 pb-24 bg-(--color-bg) text-(--color-text);
   }
 
   .home-container {
     @apply max-w-6xl mx-auto px-4;
   }
 
-  /* Espaços reservados para Header e Footer */
   .header-spacer {
-    @apply h-16 border-b border-white/10;
+    @apply h-16 border-b border-b-(--surface-border);
   }
 
   .footer-spacer {
-    @apply h-20 border-t border-white/10;
+    @apply h-20 border-t border-t-(--surface-border);
   }
 
-  /* Títulos de seção */
   .section-title {
-    @apply text-xl font-semibold text-red-500 mb-4;
+    @apply text-xl font-semibold mb-4 text-(--color-accent-primary);
   }
 
-  /* Busca */
   .search-section {
-    @apply mb-8;
+    @apply mt-8;
   }
 
   .search-input {
-    @apply w-full bg-black border border-red-600 text-white placeholder-gray-400 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-red-600;
+    @apply w-full rounded-md py-2 px-3 focus:outline-none focus:ring-2
+    bg-(--color-bg) border border-(--color-accent-primary) text-(--color-text)
+    placeholder:text-(--color-muted) focus:ring-(--color-accent-primary);
   }
 
-  /* Carrossel */
   .carousel {
-    @apply overflow-hidden rounded-lg border border-white/10 bg-white/5;
+    @apply overflow-hidden rounded-lg border border-(--surface-border) bg-(--surface) justify-items-center;
   }
 
   .carousel-list {
@@ -43,12 +40,11 @@
   }
 
   .carousel-item {
-    @apply min-w-[16rem] h-40 bg-black/40 flex items-center justify-center text-white/70 rounded-md;
+    @apply min-w-[16rem] h-40 flex items-center justify-center rounded-md bg-(--item-bg) text-(--item-text);
   }
 
-  /* Catálogo */
   .catalog-section {
-    @apply mt-10;
+    @apply mt-8;
   }
 
   .movies-grid {
@@ -56,22 +52,22 @@
   }
 
   .movie-card {
-    @apply bg-white/5 rounded-lg p-4 border border-white/10 hover:border-red-600 transition;
+    @apply rounded-lg p-4 border transition bg-(--surface) border-(--surface-border) hover:border-(--color-accent-primary);
   }
 
   .movie-poster {
-    @apply h-40 bg-black/40 rounded-md mb-3 flex items-center justify-center text-white/60;
+    @apply h-40 rounded-md mb-3 flex items-center justify-center bg-(--item-bg) text-(--item-text);
   }
 
   .movie-title {
-    @apply text-lg font-medium text-white;
+    @apply text-lg font-medium text-(--color-text);
   }
 
   .movie-desc {
-    @apply text-sm text-white/70 mt-1;
+    @apply text-sm mt-1 text-(--color-muted);
   }
 
   .movie-rating {
-    @apply text-sm font-semibold text-red-500 mt-2;
+    @apply text-sm font-semibold mt-2 text-(--color-accent-secondary);
   }
 }

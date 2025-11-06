@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+
+  --color-accent-primary: #3b82f6;
+  --color-accent-secondary: #22c55e;
+
+  --color-muted: rgba(255, 255, 255, 0.7);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --item-bg: rgba(0, 0, 0, 0.4);
+  --item-text: rgba(255, 255, 255, 0.7);
+}
+
+html,
+body {
+  @apply bg-(--color-bg) text-(--color-text);
+}

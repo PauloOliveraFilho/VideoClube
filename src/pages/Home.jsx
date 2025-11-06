@@ -1,26 +1,9 @@
-import Header from "../componentes/Header";
 import "../styles/Home.css";
 
 function Home() {
   return (
     <main className="home-page">
-      {/* Espaço reservado para Header */}
-      <div className="header-spacer">
-        <Header />
-      </div>
-
       <div className="home-container">
-        {/* Campo de busca */}
-        <section className="search-section">
-          <h2 className="section-title">Buscar filmes</h2>
-          <input
-            className="search-input"
-            type="text"
-            placeholder="Pesquisar pelo nome do filme"
-            aria-label="Pesquisar filmes"
-          />
-        </section>
-
         {/* Carrossel de imagens */}
         <section>
           <h2 className="section-title">Destaques</h2>
@@ -32,6 +15,17 @@ function Home() {
               <li className="carousel-item">Imagem do carrossel 3</li>
             </ul>
           </div>
+        </section>
+
+        {/* Campo de busca */}
+        <section className="search-section">
+          <h2 className="section-title">Buscar filmes</h2>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Pesquisar pelo nome do filme"
+            aria-label="Pesquisar filmes"
+          />
         </section>
 
         {/* Catálogo de filmes */}

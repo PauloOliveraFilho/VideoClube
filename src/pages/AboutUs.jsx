@@ -1,3 +1,5 @@
+import Card from "../components/Card.jsx";
+
 function AboutUs() {
   return (
     <main className="about-page">
@@ -22,11 +24,7 @@ function AboutUs() {
       <section className="about-team">
         <h2>Equipe</h2>
         <div className="team-grid">
-          <article className="team-card">
-            <div className="avatar">🎬</div>
-            <h3>Paulo Marcondes</h3>
-            <p>Desenvolvedor</p>
-          </article>
+          <Card name="Paulo Marcondes" description="Estudante de ADS" />
         </div>
       </section>
 

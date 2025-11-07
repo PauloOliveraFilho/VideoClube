@@ -6,7 +6,7 @@
   }
 
   .card .card-image {
-    @apply max-w-[60%] h-auto rounded-[50%] mb-2.5;
+    @apply max-w-[60%] h-auto rounded-[50%] mb-2.5 block mx-auto;
   }
 
   .card .card-title {

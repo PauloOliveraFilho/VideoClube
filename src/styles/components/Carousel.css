@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer components {
+  .carousel {
+    @apply overflow-hidden relative border-(--surface-border) bg-(--surface) flex justify-center items-center w-full max-w-7xl h-[40vh] mx-auto;
+  }
+
+  .carousel-item {
+    @apply rounded-lg shadow-xs shadow-gray-600 w-full h-full object-cover object-center select-none;
+  }
+
+  .carousel-item-hidden {
+    display: none;
+  }
+
+  .arrow {
+    @apply absolute w-8 h-8 hover:cursor-pointer drop-shadow-[#555] drop-shadow-[0px,0px,5px];
+  }
+
+  .arrow-left {
+    @apply left-4;
+  }
+
+  .arrow-right {
+    @apply right-4;
+  }
+
+  .indicators {
+    @apply flex absolute bottom-4;
+  }
+
+  .indicator {
+    @apply bg-white h-2 w-2 rounded-full border-none outline-none shadow shadow-[#555] m-1 cursor-pointer;
+  }
+
+  .indicator-inactive {
+    @apply bg-gray-600;
+  }
+}

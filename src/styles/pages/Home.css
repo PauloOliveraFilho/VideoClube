@@ -2,7 +2,7 @@
 
 @layer base {
   .home-page {
-    @apply min-h-screen pt-20 pb-24 bg-(--color-bg) text-(--color-text);
+    @apply min-h-screen pt-6 pb-24 bg-(--color-bg) text-(--color-text);
   }
 
   .home-container {
@@ -21,6 +21,10 @@
     @apply text-xl font-semibold mb-4 text-(--color-accent-primary);
   }
 
+  .section-carousel {
+    @apply flex flex-col;
+  }
+
   .search-section {
     @apply mt-8;
   }
@@ -32,15 +36,7 @@
   }
 
   .carousel {
-    @apply overflow-hidden rounded-lg border border-(--surface-border) bg-(--surface) justify-items-center;
-  }
-
-  .carousel-list {
-    @apply flex gap-4 p-4;
-  }
-
-  .carousel-item {
-    @apply min-w-[16rem] h-40 flex items-center justify-center rounded-md bg-(--item-bg) text-(--item-text);
+    @apply flex overflow-hidden rounded-lg border border-(--surface-border) bg-(--surface) justify-items-center;
   }
 
   .catalog-section {

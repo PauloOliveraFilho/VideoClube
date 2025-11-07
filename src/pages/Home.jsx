@@ -1,19 +1,17 @@
 import "../styles/pages/Home.css";
+import { slides } from "../data/carouselData.json";
+import Carousel from "../components/Carousel";
+import MovieCard from "../components/MovieCard";
 
 function Home() {
   return (
     <main className="home-page">
       <div className="home-container">
         {/* Carrossel de imagens */}
-        <section>
+        <section className="section-carousel">
           <h2 className="section-title">Destaques</h2>
           <div className="carousel">
-            {/* Área de carrossel (somente estrutura) */}
-            <ul className="carousel-list">
-              <li className="carousel-item">Imagem do carrossel 1</li>
-              <li className="carousel-item">Imagem do carrossel 2</li>
-              <li className="carousel-item">Imagem do carrossel 3</li>
-            </ul>
+            <Carousel data={slides} />
           </div>
         </section>
 
@@ -28,42 +26,7 @@ function Home() {
           />
         </section>
 
-        {/* Catálogo de filmes */}
-        <section className="catalog-section">
-          <h2 className="section-title">Catálogo</h2>
-
-          <div className="movies-grid">
-            <article className="movie-card">
-              <h3 className="movie-title">Título do Filme 1</h3>
-              <figure>
-                <div className="movie-poster">Imagem do filme 1</div>
-                <figcaption>Poster do filme 1</figcaption>
-              </figure>
-              <p className="movie-desc">Descrição breve do filme 1.</p>
-              <p className="movie-rating">Nota: 8.5</p>
-            </article>
-
-            <article className="movie-card">
-              <h3 className="movie-title">Título do Filme 2</h3>
-              <figure>
-                <div className="movie-poster">Imagem do filme 2</div>
-                <figcaption>Poster do filme 2</figcaption>
-              </figure>
-              <p className="movie-desc">Descrição breve do filme 2.</p>
-              <p className="movie-rating">Nota: 7.9</p>
-            </article>
-
-            <article className="movie-card">
-              <h3 className="movie-title">Título do Filme 3</h3>
-              <figure>
-                <div className="movie-poster">Imagem do filme 3</div>
-                <figcaption>Poster do filme 3</figcaption>
-              </figure>
-              <p className="movie-desc">Descrição breve do filme 3.</p>
-              <p className="movie-rating">Nota: 9.1</p>
-            </article>
-          </div>
-        </section>
+        <MovieCard data={slides} />
       </div>
     </main>
   );

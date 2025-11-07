@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer components {
+  .catalog-section {
+    @apply mt-8;
+  }
+
+  .movies-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .movie-card {
+    @apply rounded-lg p-4 border transition bg-(--surface) border-(--surface-border) hover:border-(--color-accent-primary);
+  }
+
+  .movie-poster {
+    @apply h-40 rounded-md mb-3 flex items-center justify-center bg-(--item-bg) text-(--item-text);
+  }
+
+  .movie-title {
+    @apply text-lg font-medium text-(--color-text);
+  }
+
+  .movie-desc {
+    @apply text-sm mt-1 text-(--color-muted);
+  }
+
+  .movie-rating {
+    @apply text-sm font-semibold mt-2 text-(--color-accent-secondary);
+  }
+}

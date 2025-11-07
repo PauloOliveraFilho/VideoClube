@@ -1,32 +1,33 @@
 import "../styles/components/Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header className="site-header">
       <div className="header-container">
         <div className="header-logo">
-          <a href="/" className="header-brand" aria-label="Página inicial">
+          <Link to={"/"} className="header-brand" aria-label="Página inicial">
             <span className="brand-mark">VC</span>
             <span className="brand-name">VideoClube</span>
-          </a>
+          </Link>
         </div>
 
         <nav aria-label="Navegação principal" className="header-right">
           <ul className="header-options">
             <li>
-              <a className="header-link" href="#">
+              <Link to={"/"} className="header-link">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header-link" href="#">
+              <Link to={"/about"} className="header-link">
                 Sobre nós
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header-link" href="#">
+              <Link to={"/login"} className="header-link">
                 Entrar
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

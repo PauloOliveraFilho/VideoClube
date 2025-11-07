@@ -7,7 +7,6 @@ function Home() {
   return (
     <main className="home-page">
       <div className="home-container">
-        {/* Carrossel de imagens */}
         <section className="section-carousel">
           <h2 className="section-title">Destaques</h2>
           <div className="carousel">

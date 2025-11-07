@@ -1,3 +1,5 @@
+import "../styles/components/Card.css";
+
 function Card({
   name = "Placeholder",
   description = "This is a placeholder card.",

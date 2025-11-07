@@ -17,7 +17,7 @@ function Footer() {
         </nav>
 
         {/* Informações legais */}
-        <div>
+        <div className="footer-legal">
           <p>
             &copy; {new Date().getFullYear()} VideoClube. Todos os direitos
             reservados.

@@ -20,7 +20,7 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link to={"/about"} className="header-link">
+              <Link to={"/sobre"} className="header-link">
                 Sobre nós
               </Link>
             </li>

@@ -6,7 +6,7 @@
   }
 
   .carousel-item {
-    @apply rounded-lg shadow-xs shadow-gray-600 w-[600px] h-full object-cover object-center select-none;
+    @apply rounded-lg shadow-xs shadow-gray-600 w-full h-full object-contain object-center select-none;
   }
 
   .carousel-item-hidden {

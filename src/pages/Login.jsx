@@ -1,0 +1,45 @@
+import { Link } from "react-router-dom";
+import "../styles/pages/Login.css";
+
+function Login() {
+  return (
+    <main className="login-page">
+      <section className="login-container">
+        <h2 className="login-title">Login</h2>
+        <form method="POST" className="login-form">
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              className="form-input"
+              id="email"
+              type="email"
+              placeholder="Digite o seu email"
+            />
+          </div>
+          <div className="form-group">
+            <labe htmlFor="senha" className="form-label">
+              Senha
+            </labe>
+            <input
+              className="form-input"
+              id="senha"
+              type="password"
+              placeholder="Digite a sua senha"
+            />
+          </div>
+          <button className="btn-primary" type="submit">
+            Entrar
+          </button>
+        </form>
+
+        <Link to={"/recover"} className="forgot-link">
+          Esqueci a senha
+        </Link>
+      </section>
+    </main>
+  );
+}
+
+export default Login;

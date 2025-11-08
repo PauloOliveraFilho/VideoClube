@@ -34,6 +34,6 @@
   }
 
   .header-link {
-    @apply text-sm text-(--color-muted) hover:text-(--color-accent-primary);
+    @apply font-bold text-sm text-(--color-text) hover:text-(--color-accent-primary);
   }
 }

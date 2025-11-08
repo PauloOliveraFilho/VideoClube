@@ -2,7 +2,7 @@
 
 @layer components {
   .site-footer {
-    @apply w-full text-sm border-t border-(--surface-border) bg-(--surface);
+    @apply w-full text-sm bg-(--color-bg) border-b border-b-(--surface-border);
   }
 
   .footer-container {
@@ -14,7 +14,7 @@
   }
 
   .footer-brand span {
-    @apply text-xs w-[103px];
+    @apply text-[15px] pl-4 w-auto;
   }
 
   .footer-nav {
@@ -22,14 +22,14 @@
   }
 
   .footer-links {
-    @apply flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-1 text-(--color-muted) text-xs sm:text-sm mt-1 sm:mt-0;
+    @apply flex flex-wrap items-center justify-center pr-5 sm:justify-end gap-x-4 gap-y-1 text-(--color-muted) text-xs sm:text-sm mt-1 sm:mt-0;
   }
 
-  .footer-links a {
+  .footer-links li {
     @apply hover:text-(--color-accent-primary) transition-colors;
   }
 
   .footer-legal {
-    @apply text-(--color-muted) text-xs text-center sm:text-left mt-2 sm:mt-0;
+    @apply text-(--color-muted) text-sm text-center sm:text-left mt-2 sm:mt-0;
   }
 }

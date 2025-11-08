@@ -30,10 +30,10 @@
   }
 
   .indicator {
-    @apply bg-white h-2 w-2 rounded-full border-none outline-none shadow shadow-[#555] m-1 cursor-pointer;
+    @apply bg-white h-2 w-2 rounded-full border-none outline-none shadow shadow-[#000000] m-1 cursor-pointer;
   }
 
   .indicator-inactive {
-    @apply bg-gray-600;
+    @apply bg-(--color-accent-secondary) shadow-black/70;
   }
 }

@@ -5,7 +5,7 @@ function Login() {
   return (
     <main className="login-page">
       <section className="login-container">
-        <h2 className="login-title">Login</h2>
+        <h2 className="login-title">Entrar</h2>
         <form method="POST" className="login-form">
           <div className="form-group">
             <label htmlFor="email" className="form-label">
@@ -28,14 +28,17 @@ function Login() {
               type="password"
               placeholder="Digite a sua senha"
             />
+            <Link to={"/recover"} className="link forgot-link">
+              Esqueci a senha
+            </Link>
           </div>
           <button className="btn-primary" type="submit">
             Entrar
           </button>
         </form>
 
-        <Link to={"/recover"} className="forgot-link">
-          Esqueci a senha
+        <Link to={"/cadastrar-se"} className="link">
+          Cadastrar-se
         </Link>
       </section>
     </main>

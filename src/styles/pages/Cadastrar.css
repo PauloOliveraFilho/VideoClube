@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @layer base {
-  .login-page {
+  .cadastrar-page {
     @apply min-h-screen pb-20 flex items-center justify-center bg-linear-to-br from-(--color-accent-primary) to-(--color-accent-secondary);
   }
 
-  .login-container {
+  .cadastrar-container {
     @apply bg-white shadow-xl rounded-2xl w-[500px] h-auto p-8 flex flex-col items-center;
   }
 
-  .login-title {
+  .cadastrar-title {
     @apply text-2xl font-bold text-black mb-6 text-center;
   }
 
-  .login-form {
+  .cadastrar-form {
     @apply w-full flex flex-col gap-10;
   }
 
@@ -31,13 +31,5 @@
 
   .btn-primary {
     @apply w-full bg-(--color-accent-primary) text-white py-2 rounded-lg mt-16 font-medium hover:bg-blue-600 transition;
-  }
-
-  .link {
-    @apply mt-4 font-bold text-xl text-(--color-accent-primary) hover:underline hover:text-blue-600 hover:text-shadow-xs transition;
-  }
-
-  .forgot-link {
-    @apply mt-2 text-end text-(--color-accent-secondary) hover:underline hover:text-green-600 hover:text-shadow-xs transition;
   }
 }

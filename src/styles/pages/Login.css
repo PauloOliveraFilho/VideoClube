@@ -2,7 +2,7 @@
 
 @layer base {
   .login-page {
-    @apply min-h-screen pb-20 flex items-center justify-center bg-gradient-to-br from-(--color-accent-primary) to-(--color-accent-secondary);
+    @apply min-h-screen pb-20 flex items-center justify-center bg-linear-to-br from-(--color-accent-primary) to-(--color-accent-secondary);
   }
 
   .login-container {

@@ -1,50 +1,47 @@
 @import "tailwindcss";
 
 @layer base {
-  /* Layout geral */
   .about-page {
-    @apply min-h-screen pt-20 pb-24 bg-(--color-bg) text-(--color-text);
+    @apply min-h-screen pt-18 pb-24 text-(--color-text);
   }
 
   .hero-title {
-    @apply text-3xl font-bold text-(--color-accent-primary) mb-2;
+    @apply text-3xl font-bold text-(--color-accent-primary) mb-4;
   }
 
   .hero-desc {
-    @apply text-base text-(--color-muted);
+    @apply text-xl text-(--color-text);
   }
 
   .about-mission h2,
   .about-team h2,
   .about-contact h2,
-  .section-title2 {
-    @apply text-xl font-semibold mb-4 text-(--color-accent-primary);
+  .section-title {
+    @apply text-2xl font-bold mb-4 text-(--color-accent-primary);
   }
 
-  .about-team {
-    @apply mb-40;
-  }
   .about-hero,
   .about-contact,
   .about-team,
   .about-mission {
-    @apply max-w-6xl mx-auto px-4;
-  }
-  .about-mission {
-    @apply mb-20;
-  }
-
-  .about-contact {
-    @apply mb-0;
+    @apply max-w-6xl mx-auto border-[3px] bg-black shadow-xl rounded-2xl p-3;
   }
 
   .about-hero {
     @apply mb-20;
   }
 
+  .about-mission {
+    @apply mb-20;
+  }
+
+  .about-team {
+    @apply mb-20;
+  }
+
   .about-mission p,
   .about-contact p {
-    @apply text-base text-(--color-muted);
+    @apply text-xl text-(--color-text);
   }
 
   .team-grid {
@@ -52,6 +49,6 @@
   }
 
   .about-contact a {
-    @apply underline text-(--color-accent-secondary);
+    @apply underline text-xl text-(--color-accent-secondary);
   }
 }

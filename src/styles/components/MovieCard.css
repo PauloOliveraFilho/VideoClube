@@ -2,7 +2,7 @@
 
 @layer components {
   .catalog-section {
-    @apply mt-8;
+    @apply mt-8 bg-(--color-bg) shadow-xl rounded-2xl p-8 border-[3px];
   }
 
   .movies-grid {
@@ -10,7 +10,7 @@
   }
 
   .movie-card {
-    @apply rounded-lg p-4 border transition bg-(--surface) border-(--surface-border) hover:border-(--color-accent-primary);
+    @apply rounded-lg p-4 transition bg-(--surface) border-[3px] border-black hover:border-(--color-accent-primary) hover:shadow-lg hover:border-3;
   }
 
   .movie-poster {
@@ -19,6 +19,10 @@
 
   .movie-title {
     @apply text-lg font-medium text-(--color-text);
+  }
+
+  .catalog-section figcaption {
+    @apply mt-2 text-(--item-text);
   }
 
   .movie-desc {

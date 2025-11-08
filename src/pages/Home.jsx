@@ -14,7 +14,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Campo de busca */}
         <section className="search-section">
           <h2 className="section-title">Buscar filmes</h2>
           <input

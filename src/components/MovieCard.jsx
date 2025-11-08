@@ -2,16 +2,10 @@ import { useState } from "react";
 import "../styles/components/MovieCard.css";
 import { Link } from "react-router-dom";
 import moviesData from "../data/moviesData.json";
+import formatPrice from "../utils/money.js";
 
 function MovieCard() {
   const [movies, setMovies] = useState(moviesData);
-
-  function formatCurrency(amount) {
-    return amount.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
-  }
 
   return (
     <section className="catalog-section">
@@ -21,20 +15,14 @@ function MovieCard() {
           return (
             <Link to={`/filme/${idx}`} key={idx} className="movie-link">
               <article key={idx} className="movie-card">
-                <h3 className="movie-title">{movie.title + " " + (idx + 1)}</h3>
+                <h3 className="movie-title">{movie.title}</h3>
                 <figure>
-                  <div className="movie-poster">
-                    {movie.src + " " + (idx + 1)}
-                  </div>
-                  <figcaption>{movie.caption + " " + (idx + 1)}</figcaption>
+                  <div className="movie-poster">{movie.src}</div>
+                  <figcaption>{movie.caption}</figcaption>
                 </figure>
-                <p className="movie-desc">
-                  {movie.description + " " + (idx + 1)}
-                </p>
+                <p className="movie-desc">{movie.description}</p>
                 <p className="movie-rating">Nota: {movie.rating}</p>
-                <p className="movie-price">
-                  Preço: {formatCurrency(movie.price)}
-                </p>
+                <p className="movie-price">Preço: {formatPrice(movie.price)}</p>
               </article>
             </Link>
           );

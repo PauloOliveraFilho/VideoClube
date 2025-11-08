@@ -16,5 +16,5 @@
 
 html,
 body {
-  @apply bg-gradient-to-br from-(--color-accent-primary) to-(--color-accent-secondary) text-(--color-text) font-[Arial,sans-serif];
+  @apply min-h-screen bg-gradient-to-br from-(--color-accent-primary) to-(--color-accent-secondary) text-(--color-text) font-[Arial,sans-serif];
 }

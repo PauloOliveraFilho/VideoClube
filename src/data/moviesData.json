@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Filme Exemplo 1",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 1,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 2",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 2,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 3",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 3,
+    "price": 10
+  }
+]

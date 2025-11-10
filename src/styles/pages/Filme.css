@@ -2,34 +2,44 @@
 
 @layer base {
     .movie-detail-page {
-        @apply min-h-screen flex justify-center p-8;
+        @apply min-h-screen flex justify-center pt-18 pb-24 text-(--color-text);
     }
 
     .movie-detail-section {
-        @apply bg-black h-auto flex justify-between items-start gap-8;
+        @apply  max-w-6xl mx-auto border-[3px] shadow-xl rounded-2xl p-4 flex-col bg-black h-auto flex justify-evenly items-start gap-8;
     }
 
-    .movie-detail-card {
-        @apply w-[45%] flex flex-col items-center ml-3 p-4;
-    }
-
-    .movie-detail-card img {
-        @apply w-full h-auto rounded-xl
+    .movie-detail-content {
+        @apply flex md:flex-row justify-between items-start gap-8 w-full;
     }
 
     .movie-detail-title {
-        @apply text-center text-2xl p-1 mb-4;
+        @apply w-full text-3xl font-bold text-center text-(--color-accent-primary);
+    }
+
+    .movie-detail-card {
+        @apply w-full md:w-[45%] flex justify-center items-center;
+    }
+
+    .movie-detail-card img {
+        @apply w-full h-auto rounded-xl border border-(--surface-border) shadow-lg;
     }
 
     .movie-detail-poster {
         @apply p-1;
     }
 
-    .movie-detail-poster figcaption {
-        @apply p-4;
+    .movie-detail-desc {
+        @apply w-full md:w-[50%] text-xl leading-relaxed text-(--color-text);
     }
 
-    .movie-detail-desc {
-        @apply w-1/2 text-xl;
+    .movie-detail-actions {
+        @apply flex w-full justify-center gap-4 ;
     }
+
+    .movie-detail-btn {
+    @apply px-4 py-2 rounded-md border border-(--color-accent-primary)
+    text-(--color-accent-primary) hover:bg-(--color-accent-primary)
+    hover:text-black transition-all duration-200;
+  }
 }

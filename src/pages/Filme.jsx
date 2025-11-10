@@ -35,6 +35,9 @@ function Filme() {
               <p>{movie.description}</p>
           </div>
         </div>
+        <div className="movie-detail-actions">
+          <button className="movie-detail-btn">Comprar</button>
+        </div>
       </section>
     </main>
   );

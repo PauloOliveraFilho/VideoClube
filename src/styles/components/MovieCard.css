@@ -36,4 +36,36 @@
   .movie-price {
     @apply text-[15px] font-bold mt-2 text-(--color-accent-tertiary);
   }
+
+  .pagination {
+    @apply flex justify-center items-center gap-4 mt-8 flex-wrap;
+  }
+
+  .pagination-btn {
+    @apply px-4 py-2 bg-(--color-accent-primary) text-(--color-text) border-none rounded-md cursor-pointer text-base transition-colors duration-300;
+  }
+
+  .pagination-btn:hover:not(:disabled) {
+    @apply bg-(--color-accent-secondary);
+  }
+
+  .pagination-btn:disabled {
+    @apply bg-(--color-muted) cursor-not-allowed;
+  }
+
+  .pagination-numbers {
+    @apply flex gap-2;
+  }
+
+  .pagination-number {
+    @apply px-3 py-2 bg-(--surface) border border-(--color-border) rounded-md cursor-pointer transition-all duration-300;
+  }
+
+  .pagination-number:hover {
+    @apply bg-(--color-muted);
+  }
+
+  .pagination-number.active {
+    @apply bg-(--color-accent-primary) text-(--color-text) border-(--color-accent-primary);
+  }
 }

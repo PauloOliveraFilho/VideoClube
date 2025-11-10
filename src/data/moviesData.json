@@ -22,5 +22,69 @@
     "description": "Descrição do filme",
     "rating": 3,
     "price": 10
+  },
+  {
+    "title": "Filme Exemplo 4",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 5",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 6",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 7",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 8",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 9",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 10",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
+  },
+  {
+    "title": "Filme Exemplo 11",
+    "src": "https://placehold.co/150",
+    "caption": "Poster do filme",
+    "description": "Descrição do filme",
+    "rating": 4,
+    "price": 10
   }
 ]

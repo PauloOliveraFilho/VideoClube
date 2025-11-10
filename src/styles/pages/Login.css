@@ -2,15 +2,15 @@
 
 @layer base {
   .login-page {
-    @apply min-h-screen pb-20 flex items-center justify-center bg-linear-to-br from-(--color-accent-primary) to-(--color-accent-secondary);
+    @apply min-h-screen pb-20 flex items-center justify-center;
   }
 
   .login-container {
-    @apply bg-white shadow-xl rounded-2xl w-[500px] h-auto p-8 flex flex-col items-center;
+    @apply bg-(--color-bg) shadow-xl rounded-2xl w-[500px] h-auto p-8 flex flex-col items-center;
   }
 
   .login-title {
-    @apply text-2xl font-bold text-black mb-6 text-center;
+    @apply text-2xl font-bold text-(--color-text) mb-6 text-center;
   }
 
   .login-form {
@@ -21,16 +21,16 @@
     @apply flex flex-col gap-1;
   }
 
-  .form-label {
-    @apply text-xl text-black font-semibold;
+  .form-group .form-label {
+    @apply text-xl text-(--color-text) font-semibold;
   }
 
   .form-input {
-    @apply border font-medium text-black border-gray-300 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-(--color-accent-primary) transition;
+    @apply border font-medium text-(--color-text) border-gray-300 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-(--color-accent-primary) transition;
   }
 
   .btn-primary {
-    @apply w-full bg-(--color-accent-primary) text-white py-2 rounded-lg mt-16 font-medium hover:bg-blue-600 transition;
+    @apply w-full bg-(--color-accent-primary) text-(--color-text) py-2 rounded-lg mt-16 font-medium hover:bg-blue-600 transition;
   }
 
   .link {

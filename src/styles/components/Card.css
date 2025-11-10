@@ -2,7 +2,7 @@
 
 @layer components {
   .card {
-    @apply border border-(--surface-border) rounded-[10px] inset-shadow-sm inset-shadow-white/30 shadow-white p-5 m-2.5 text-center max-w-[250px] inline-block hover:border-(--color-accent-primary) hover:shadow-lg hover:shadow-(--color-accent-primary)/20 transition-all;
+    @apply border border-(--surface-border) rounded-[10px] inset-shadow-sm inset-shadow-(--color-muted) shadow-(--color-muted) p-5 m-2.5 text-center max-w-[250px] inline-block hover:border-(--color-accent-primary) hover:shadow-lg hover:shadow-(--color-accent-primary)/20 transition-all;
   }
 
   .card .card-image {

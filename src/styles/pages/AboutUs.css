@@ -24,7 +24,7 @@
   .about-contact,
   .about-team,
   .about-mission {
-    @apply max-w-6xl mx-auto border-[3px] bg-black shadow-xl rounded-2xl p-3;
+    @apply max-w-6xl mx-auto border-[3px] bg-(--color-bg) shadow-xl rounded-2xl p-3;
   }
 
   .about-hero {

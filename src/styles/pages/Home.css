@@ -23,7 +23,7 @@
 
   .section-carousel,
   .search-section {
-    @apply bg-black border-[3px] shadow-xl rounded-2xl;
+    @apply bg-(--color-bg) border-[3px] shadow-xl rounded-2xl;
   }
 
   .section-carousel {

@@ -30,7 +30,7 @@
   }
 
   .indicator {
-    @apply bg-white h-2 w-2 rounded-full border-none outline-none shadow shadow-[#000000] m-1 cursor-pointer;
+    @apply bg-(--color-bg) h-2 w-2 rounded-full border-none outline-none shadow shadow-[#000000] m-1 cursor-pointer;
   }
 
   .indicator-inactive {

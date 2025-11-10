@@ -36,4 +36,8 @@
   .header-link {
     @apply text-[18px] text-(--color-text) hover:text-(--color-accent-primary);
   }
+
+  .theme-toggle-btn {
+    @apply ml-6 px-3 py-2 rounded-md border border-(--surface-border) bg-(--surface) text-(--color-text) hover:border-(--color-accent-primary) hover:text-(--color-accent-primary) transition-colors;
+  }
 }

@@ -6,7 +6,7 @@
   }
 
   .ticket-section {
-    @apply max-w-6xl mx-auto px-4 border-[3px] shadow-xl rounded-2xl p-4 bg-black;
+    @apply max-w-6xl mx-auto px-4 border-[3px] shadow-xl rounded-2xl p-4 bg-(--color-bg);
   }
 
   .ticket-form {
@@ -37,16 +37,15 @@
   }
 
   .ticket-btn {
-    @apply px-4 py-2 rounded-md bg-(--color-accent-primary) text-white hover:bg-(--color-accent-primary)/80 transition-colors;
+    @apply px-4 py-2 rounded-md bg-(--color-accent-primary) font-bold text-(--color-text) hover:bg-(--color-accent-primary)/80 transition-colors;
   }
 
-  /* Seleção de assentos */
   .ticket-seats {
     @apply mt-6 md:mt-0 md:col-span-1;
   }
 
   .seat-toggle-btn {
-    @apply w-full px-4 py-2 rounded-md bg-(--color-accent-primary) text-white hover:bg-(--color-accent-primary)/80 transition-colors;
+    @apply w-full font-bold px-4 py-2 rounded-md bg-(--color-accent-primary) text-(--color-text) hover:bg-(--color-accent-primary)/80 transition-colors;
   }
 
   .seat-panel {
@@ -82,11 +81,11 @@
   }
 
   .seat-selected {
-    @apply bg-(--color-accent-primary) text-white border-(--color-accent-primary);
+    @apply bg-(--color-accent-primary) text-(--color-text) border-(--color-accent-primary);
   }
 
   .seat-occupied {
-    @apply bg-gray-600 text-white border-gray-600 cursor-not-allowed;
+    @apply bg-red-400 text-(--color-text) border-(--surface-border) cursor-not-allowed;
   }
 
   .seat-summary {

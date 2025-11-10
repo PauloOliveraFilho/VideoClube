@@ -14,7 +14,7 @@
   }
 
   .movie-poster {
-    @apply h-40 rounded-md mb-3 flex items-center justify-center bg-(--item-bg) text-(--item-text);
+    @apply h-40 rounded-md mb-3 flex items-center justify-center bg-(--color-muted) text-(--item-text);
   }
 
   .movie-title {
@@ -34,6 +34,6 @@
   }
 
   .movie-price {
-    @apply text-[15px] font-bold mt-2 text-amber-300;
+    @apply text-[15px] font-bold mt-2 text-(--color-accent-tertiary);
   }
 }

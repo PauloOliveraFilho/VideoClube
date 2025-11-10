@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  .ticket-page {
+    @apply min-h-screen pt-20 pb-24 text-(--color-text);
+  }
+
+  .ticket-section {
+    @apply max-w-6xl mx-auto px-4 border-[3px] shadow-xl rounded-2xl p-4 bg-black;
+  }
+
+  .ticket-form {
+    @apply grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8;
+  }
+
+  .ticket-fields {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 md:col-span-2;
+  }
+
+  .ticket-field label {
+    @apply block text-xs sm:text-sm text-(--color-muted) mb-1;
+  }
+
+  .ticket-field input,
+  .ticket-field select {
+    @apply w-full rounded-md py-2 px-3 focus:outline-none focus:ring-2
+    bg-(--color-bg) border border-(--color-accent-primary) text-(--color-text)
+    placeholder:text-(--color-muted) focus:ring-(--color-accent-primary);
+  }
+
+  .ticket-field .ticket-price {
+    @apply inline-block rounded-md w-full py-2 px-3 bg-(--color-bg) border border-(--color-accent-primary) text-(--color-text);
+  }
+
+  .ticket-actions {
+    @apply mt-4 flex justify-center;
+  }
+
+  .ticket-btn {
+    @apply px-4 py-2 rounded-md bg-(--color-accent-primary) text-white hover:bg-(--color-accent-primary)/80 transition-colors;
+  }
+
+  /* Seleção de assentos */
+  .ticket-seats {
+    @apply mt-6 md:mt-0 md:col-span-1;
+  }
+
+  .seat-toggle-btn {
+    @apply w-full px-4 py-2 rounded-md bg-(--color-accent-primary) text-white hover:bg-(--color-accent-primary)/80 transition-colors;
+  }
+
+  .seat-panel {
+    @apply mt-3 rounded-lg border border-(--surface-border) bg-(--surface) p-3 shadow;
+  }
+
+  .seat-legend {
+    @apply flex items-center gap-4 text-xs text-(--color-muted) mb-2;
+  }
+
+  .seat-swatch {
+    @apply inline-block w-4 h-4 rounded-sm border border-(--surface-border);
+  }
+
+  .seat-grid {
+    @apply flex flex-col gap-2;
+  }
+
+  .seat-row {
+    @apply flex items-center gap-2;
+  }
+
+  .seat-row-label {
+    @apply w-6 text-(--color-muted);
+  }
+
+  .seat {
+    @apply w-8 h-8 rounded-sm border text-xs flex items-center justify-center select-none;
+  }
+
+  .seat-free {
+    @apply bg-(--surface) border-(--surface-border) hover:bg-(--color-bg) hover:border-(--color-accent-primary) cursor-pointer;
+  }
+
+  .seat-selected {
+    @apply bg-(--color-accent-primary) text-white border-(--color-accent-primary);
+  }
+
+  .seat-occupied {
+    @apply bg-gray-600 text-white border-gray-600 cursor-not-allowed;
+  }
+
+  .seat-summary {
+    @apply mt-2 text-sm text-(--color-muted);
+  }
+}

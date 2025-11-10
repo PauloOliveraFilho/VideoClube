@@ -1,45 +1,59 @@
 @import "tailwindcss";
 
 @layer base {
-    .movie-detail-page {
-        @apply min-h-screen flex justify-center pt-18 pb-24 text-(--color-text);
-    }
+  .movie-detail-page {
+    @apply min-h-screen pt-20 pb-24 text-(--color-text);
+  }
 
-    .movie-detail-section {
-        @apply  max-w-6xl mx-auto border-[3px] shadow-xl rounded-2xl p-4 flex-col bg-black h-auto flex justify-evenly items-start gap-8;
-    }
+  .movie-detail-section {
+    @apply max-w-7xl mx-auto border-[3px] shadow-xl rounded-2xl p-4 bg-black;
+  }
 
-    .movie-detail-content {
-        @apply flex md:flex-row justify-between items-start gap-8 w-full;
-    }
+  .movie-detail-content {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 w-full items-start;
+  }
 
-    .movie-detail-title {
-        @apply w-full text-3xl font-bold text-center text-(--color-accent-primary);
-    }
+  .movie-detail-title {
+    @apply w-full text-3xl font-bold text-center text-(--color-accent-primary) mb-4;
+  }
 
-    .movie-detail-card {
-        @apply w-full md:w-[45%] flex justify-center items-center;
-    }
+  .movie-detail-card {
+    @apply w-full flex flex-col justify-start items-center gap-3;
+  }
 
-    .movie-detail-card img {
-        @apply w-full h-auto rounded-xl border border-(--surface-border) shadow-lg;
-    }
+  .movie-detail-poster {
+    @apply w-full text-center;
+  }
 
-    .movie-detail-poster {
-        @apply p-1;
-    }
+  .movie-detail-poster img {
+    @apply mx-auto w-full max-w-[260px] h-auto rounded-xl border border-(--surface-border) shadow-lg;
+  }
 
-    .movie-detail-desc {
-        @apply w-full md:w-[50%] text-xl leading-relaxed text-(--color-text);
-    }
+  .movie-detail-poster figcaption {
+    @apply text-(--color-muted) text-xs mt-1;
+  }
 
-    .movie-detail-actions {
-        @apply flex w-full justify-center gap-4 ;
-    }
+  .movie-detail-rating {
+    @apply font-medium text-(--color-accent-secondary);
+  }
 
-    .movie-detail-btn {
-    @apply px-4 py-2 rounded-md border border-(--color-accent-primary)
-    text-(--color-accent-primary) hover:bg-(--color-accent-primary)
-    hover:text-black transition-all duration-200;
+  .movie-detail-desc {
+    @apply w-full h-full text-base leading-relaxed text-(--color-text) border border-(--surface-border) bg-(--surface) rounded-xl p-4;
+  }
+
+  .movie-detail-extra {
+    @apply w-full h-full border border-(--surface-border) bg-(--surface) rounded-xl p-4 text-sm text-(--color-text);
+  }
+
+  .movie-detail-price {
+    @apply font-semibold text-(--color-accent-primary);
+  }
+
+  .movie-detail-actions {
+    @apply flex w-full justify-center gap-4 mt-6;
+  }
+
+  .movie-detail-btn {
+    @apply px-4 py-2 rounded-md border border-(--color-accent-primary) text-(--color-accent-primary) hover:bg-(--color-accent-primary) hover:text-black transition-all duration-200;
   }
 }

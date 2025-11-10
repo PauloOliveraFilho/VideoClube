@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 import Login from "./pages/Login.jsx";
 import Cadastrar from "./pages/Cadastrar.jsx";
 import Filme from "./pages/Filme.jsx";
+import ComprarTicket from "./pages/ComprarTicket.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cadastrar-se" element={<Cadastrar />} />
           <Route path="/filme/:id" element={<Filme />} />
+          <Route path="/ComprarIngresso/:id" element={<ComprarTicket />} />
         </Routes>
       </main>
       <Footer />

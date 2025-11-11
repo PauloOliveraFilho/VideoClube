@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/components/MovieCard.css";
 import { Link } from "react-router-dom";
+import moviesDataFallback from "../data/moviesData.json";
 import formatPrice from "../utils/money.js";
 
 function getItemsPerPage() {
@@ -12,7 +13,7 @@ function getItemsPerPage() {
 }
 
 function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
-  const [moviesState, setMoviesState] = useState(moviesProp);
+  const [moviesState, setMoviesState] = useState(moviesProp ?? moviesDataFallback);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
 
@@ -32,16 +33,22 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
     setCurrentPage(1);
   }, [moviesProp]);
 
-  const filteredMovies = (moviesState ?? []).filter((movie) =>
-    (movie.title || "").toLowerCase().includes((searchQuery || "").toLowerCase())
+  const moviesWithIndex = (moviesState ?? []).map((m, i) => ({
+    movie: m,
+    originalIndex: i,
+  }));
+
+  const filteredWrapped = moviesWithIndex.filter(({ movie }) =>
+    (movie.title || "")
+      .toString()
+      .toLowerCase()
+      .includes((searchQuery || "").toLowerCase())
   );
 
-  const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredWrapped.length / itemsPerPage));
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedMovies = filteredMovies.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+
+  const paginatedWrapped = filteredWrapped.slice(startIndex, startIndex + itemsPerPage);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage((p) => p + 1);
@@ -61,19 +68,20 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
     <section className="catalog-section">
       <h2 className="section-title">Catálogo</h2>
       <div className="movies-grid">
-        {paginatedMovies.length > 0 ? (
-          paginatedMovies.map((movie, idx) => {
-            const globalIndex = startIndex + idx;
+        {paginatedWrapped.length > 0 ? (
+          paginatedWrapped.map(({ movie, originalIndex }, idx) => {
+            const globalIndex = originalIndex;
+            const key = `${globalIndex}-${idx}`;
             return (
               <Link
                 to={`/Detalhes do Filme/${globalIndex}`}
-                key={globalIndex}
+                key={key}
                 className="movie-link"
               >
                 <article className="movie-card">
                   <h3 className="movie-title">{movie.title}</h3>
                   <figure>
-                    <img src={movie.src} alt={movie.alt} className="movie-poster"></img>
+                    <img src={movie.src} alt={movie.alt} className="movie-poster" />
                     <figcaption>{movie.caption}</figcaption>
                   </figure>
                   <p className="movie-desc">{movie.short_description}</p>
@@ -90,7 +98,7 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
         )}
       </div>
 
-      {filteredMovies.length > 0 && totalPages > 1 && (
+      {filteredWrapped.length > 0 && totalPages > 1 && (
         <div className="pagination">
           <button
             className="pagination-btn"

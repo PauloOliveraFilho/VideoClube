@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @layer components {
+  /* Header root */
   .site-header {
-    @apply sticky top-0 z-50 w-full shadow-md bg-(--color-bg) border-b border-b-(--surface-border);
+    @apply fixed top-0 left-0 z-50 w-full bg-(--color-bg) border-b border-b-(--surface-border) shadow-md;
   }
 
   .header-container {
@@ -26,18 +27,71 @@
   }
 
   .header-right {
-    @apply flex items-center;
+    @apply flex items-center gap-4;
   }
 
   .header-options {
-    @apply flex items-center gap-6;
+    @apply flex items-center gap-6 list-none m-0 p-0;
   }
 
   .header-link {
-    @apply text-[18px] text-(--color-text) hover:text-(--color-accent-primary);
+    @apply text-[18px] text-(--color-text) hover:text-(--color-accent-primary) no-underline px-3 py-1 rounded;
   }
 
   .theme-toggle-btn {
-    @apply ml-6 px-3 py-2 rounded-md border border-(--surface-border) bg-(--surface) text-(--color-text) hover:border-(--color-accent-primary) hover:text-(--color-accent-primary) transition-colors;
+    @apply ml-4 px-3 py-2 rounded-md border border-(--surface-border) bg-(--surface) text-(--color-text) hover:border-(--color-accent-primary) hover:text-(--color-accent-primary) transition-colors;
+  }
+
+  .mobile-menu-btn {
+    @apply hidden p-2 rounded-md bg-transparent border-none cursor-pointer text-(--color-text);
+  }
+
+  .mobile-nav {
+    @apply hidden absolute top-[calc(100%+0.5rem)] right-4 left-4 bg-(--color-bg) border border-(--surface-border) rounded-xl shadow-lg p-2 z-60;
+  }
+
+  .mobile-nav.open {
+    @apply block;
+  }
+
+  .mobile-nav ul {
+    @apply list-none m-0 p-2 flex flex-col gap-2;
+  }
+
+  .mobile-link {
+    @apply block px-4 py-2 rounded hover:bg-(--surface-hover) text-(--color-text) no-underline;
+  }
+
+  .mobile-theme-btn {
+    @apply block text-left px-4 py-2 rounded bg-transparent border-none cursor-pointer text-(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      @apply px-3;
+    }
+
+    .header-options {
+      display: none;
+    }
+
+    .theme-toggle-btn {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: inline-flex;
+    }
+
+    .mobile-nav {
+      right: 0.75rem;
+      left: 0.75rem;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mobile-nav {
+      display: none !important;
+    }
   }
 }

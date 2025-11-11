@@ -19,9 +19,10 @@ function Login() {
             />
           </div>
           <div className="form-group">
-            <labe htmlFor="senha" className="form-label">
+            {/* Corrigido 'labe' para 'label' */}
+            <label htmlFor="senha" className="form-label">
               Senha
-            </labe>
+            </label>
             <input
               className="form-input"
               id="senha"
@@ -37,7 +38,7 @@ function Login() {
           </button>
         </form>
 
-        <Link to={"/cadastrar-se"} className="link">
+        <Link to={"/Cadastrar-se"} className="link">
           Cadastrar-se
         </Link>
       </section>

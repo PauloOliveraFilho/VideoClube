@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../styles/pages/ComprarTicket.css";
 import moviesData from "../data/moviesData.json";
 import { useState, useEffect, useRef } from "react";
@@ -26,7 +26,7 @@ function ComprarTicket() {
         return prev.filter((s) => s !== seatId);
       }
       if (prev.length >= quantidade) {
-        return prev; // não permite exceder a quantidade desejada
+        return prev;
       }
       return [...prev, seatId];
     });
@@ -177,9 +177,9 @@ function ComprarTicket() {
           </div>
 
           <div className="ticket-actions">
-            <button type="button" className="ticket-btn">
+            <Link to={`/Finalizar Compra/${id}`} className="ticket-btn">
               Prosseguir
-            </button>
+            </Link>
           </div>
         </form>
       </section>

@@ -2,11 +2,11 @@
 
 @layer base {
   .cadastrar-page {
-    @apply min-h-screen pb-20 flex items-center justify-center;
+    @apply min-h-screen pt-18 pb-20 flex items-center justify-center;
   }
 
   .cadastrar-container {
-    @apply bg-(--color-bg) shadow-xl rounded-2xl w-[500px] h-auto p-8 flex flex-col items-center;
+    @apply w-full max-w-md sm:max-w-lg md:max-w-xl bg-(--color-bg) shadow-xl rounded-2xl p-6 sm:p-8 flex flex-col items-center;
   }
 
   .cadastrar-title {
@@ -14,7 +14,7 @@
   }
 
   .cadastrar-form {
-    @apply w-full flex flex-col gap-10;
+    @apply w-full flex flex-col gap-6;
   }
 
   .form-group {
@@ -26,10 +26,10 @@
   }
 
   .form-input {
-    @apply border font-medium text-(--color-text) border-(--surface-border) rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-(--color-accent-primary) transition;
+    @apply border font-medium text-(--color-text) border-(--surface-border) rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-(--color-accent-primary) transition;
   }
 
   .btn-primary {
-    @apply w-full bg-(--color-accent-primary) font-bold text-(--color-text) py-2 rounded-lg mt-16 hover:bg-blue-600 transition;
+    @apply w-full bg-(--color-accent-primary) font-bold text-(--color-text) py-2 rounded-lg mt-8 sm:mt-16 hover:bg-blue-600 transition;
   }
 }

@@ -40,7 +40,7 @@ function Filme() {
           </aside>
         </div>
         <div className="movie-detail-actions">
-          <Link to={`/ComprarIngresso/${id}`} className="movie-detail-btn">
+          <Link to={`/Comprar Ingresso/${id}`} className="movie-detail-btn">
             Comprar Ingressos
           </Link>
         </div>

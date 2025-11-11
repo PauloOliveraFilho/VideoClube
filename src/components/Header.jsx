@@ -40,7 +40,7 @@ function Header() {
             aria-label="Página inicial"
             onClick={closeMobile}
           >
-            <span className="brand-mark">VC</span>
+            <img className="brand-mark" src="/icons/logo.jpg" alt="Logo VC"></img>
             <span className="brand-name">VideoClube</span>
           </Link>
         </div>

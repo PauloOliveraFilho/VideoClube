@@ -1,16 +1,37 @@
 {
   "slides": [
     {
-      "src": "https://picsum.photos/seed/img1/256/160",
-      "alt": "Image 1 for carousel"
+      "src": "/images/movies/filme0.jpg",
+      "alt": "Filme em destaque: Avatar"
     },
     {
-      "src": "https://picsum.photos/seed/img2/256/160",
-      "alt": "Image 2 for carousel"
+      "src": "/images/movies/filme2.jpg",
+      "alt": "Filme em destaque: Coraline"
     },
     {
-      "src": "https://picsum.photos/seed/img3/256/160",
-      "alt": "Image 3 for carousel"
+      "src": "/images/movies/filme3.jpg",
+      "alt": "Filme em destaque: Doutor Estranho"
+    },
+    {
+      "src": "/images/movies/filme5.jpg",
+      "alt": "Filme em destaque: Pokemon Mewtwo x Mew"
+    },
+    {
+      "src": "/images/movies/filme1.jpg",
+      "alt": "Filme em destaque: Cidade de Deus"
+    },
+    {
+      "src": "/images/movies/filme6.jpg",
+      "alt": "Filme em destaque: Sonic 3"
+    },
+    {
+      "src": "/images/movies/filme7.jpg",
+      "alt": "Filme em destaque: Tarzan"
+    },
+    {
+      "src": "/images/movies/filme15.jpg",
+      "alt": "Filme em destaque: Wicked"
     }
+
   ]
 }

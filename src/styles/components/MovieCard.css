@@ -30,7 +30,7 @@
   }
 
   .movie-rating {
-    @apply text-[15px] font-bold mt-2 text-(--color-accent-secondary);
+    @apply text-[15px] font-bold mt-2 text-(--color-accent-quaternary);
   }
 
   .movie-price {

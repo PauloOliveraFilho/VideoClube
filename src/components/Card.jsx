@@ -3,13 +3,14 @@ import "../styles/components/Card.css";
 function Card({
   name = "Placeholder",
   description = "This is a placeholder card.",
+  alt = "Placeholder image",
   imageUrl = "https://placehold.co/150",
 }) {
   return (
     <div className="card">
       <img
         className="card-image"
-        alt="Team member picture"
+        alt={alt}
         src={imageUrl}
       ></img>
       <h3 className="card-title">{name}</h3>

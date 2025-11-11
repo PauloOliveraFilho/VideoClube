@@ -1,12 +1,46 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 import "../styles/pages/Filme.css";
 import moviesData from "../data/moviesData.json";
+
 import formatCurrency from "../utils/money";
 function Filme() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  const movie = moviesData[id];
+  const getMovieByParam = (param) => {
+    if (param == null) return undefined;
+    const decoded = decodeURIComponent(param);
+    
+    if (/^\d+$/.test(decoded)) {
+      const idx = Number(decoded);
+      return moviesData[idx];
+    }
+    
+    const lower = decoded.toLowerCase();
+    return moviesData.find(
+      (m) =>
+        (m.title && m.title.toLowerCase() === lower) ||
+        (m.slug && m.slug.toLowerCase() === lower)
+    );
+  };
+
+  const movie = getMovieByParam(id);
+
+  if (!movie) {
+    return (
+      <main className="movie-detail-page">
+        <section className="movie-detail-section">
+          <h3 className="movie-detail-title">Filme não encontrado</h3>
+          <div className="movie-detail-actions">
+            <button onClick={() => navigate(-1)} className="movie-detail-btn">
+              Voltar
+            </button>
+          </div>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="movie-detail-page">
@@ -35,7 +69,8 @@ function Filme() {
               <li className="movie-detail-price">
                 Preço: {formatCurrency(movie.price)}
               </li>
-              <li>Legenda: {movie.caption}</li>
+              <li>Gênero: {movie.caption}</li>
+              <li>Ano: {movie.year}</li>
             </ul>
           </aside>
         </div>

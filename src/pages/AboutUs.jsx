@@ -25,7 +25,7 @@ function AboutUs() {
       <section className="about-team">
         <h2 className="section-title">Equipe</h2>
         <div className="team-grid">
-          <Card name="Paulo Marcondes" description="Estudante de ADS" />
+          <Card name="Paulo Marcondes" description="Estudante de ADS" alt="Foto de Paulo" imageUrl="/images/team/PauloF.jpg" />
         </div>
       </section>
 

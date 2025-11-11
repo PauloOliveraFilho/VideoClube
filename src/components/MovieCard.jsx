@@ -7,9 +7,9 @@ import formatPrice from "../utils/money.js";
 function getItemsPerPage() {
   if (typeof window === "undefined") return 9;
   const w = window.innerWidth;
-  if (w < 640) return 2; // telas pequenas -> 3 filmes por página
-  if (w < 1024) return 6; // telas médias -> 6 filmes por página
-  return 9; // telas grandes -> 9 filmes por página
+  if (w < 640) return 2; 
+  if (w < 1024) return 6;
+  return 9;
 }
 
 function MovieCard({ searchQuery = "" }) {
@@ -23,7 +23,7 @@ function MovieCard({ searchQuery = "" }) {
       setItemsPerPage(newCount);
     }
     window.addEventListener("resize", handleResize);
-    // garantir valor correto no mount
+    
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -49,7 +49,6 @@ function MovieCard({ searchQuery = "" }) {
 
   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Resetar para página 1 quando a busca ou itemsPerPage mudarem
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, itemsPerPage]);
@@ -60,19 +59,20 @@ function MovieCard({ searchQuery = "" }) {
       <div className="movies-grid">
         {paginatedMovies.length > 0 ? (
           paginatedMovies.map((movie, idx) => {
+            const globalIndex = startIndex + idx; // <-- usa índice global
             return (
               <Link
-                to={`/Detalhes do Filme/${idx}`}
-                key={idx}
+                to={`/Detalhes do Filme/${globalIndex}`}
+                key={globalIndex}
                 className="movie-link"
               >
                 <article className="movie-card">
                   <h3 className="movie-title">{movie.title}</h3>
                   <figure>
-                    <div className="movie-poster">{movie.src}</div>
+                    <img src={movie.src} alt={movie.alt} className="movie-poster"></img>
                     <figcaption>{movie.caption}</figcaption>
                   </figure>
-                  <p className="movie-desc">{movie.description}</p>
+                  <p className="movie-desc">{movie.short_description}</p>
                   <p className="movie-rating">Nota: {movie.rating}</p>
                   <p className="movie-price">
                     Preço: {formatPrice(movie.price)}

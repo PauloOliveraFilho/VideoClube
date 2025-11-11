@@ -1,90 +1,201 @@
 [
   {
-    "title": "Filme Exemplo 1",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 1,
-    "price": 10
+    "title": "Avatar",
+    "src": "/images/movies/filme0.jpg",
+    "alt": "Filme: Avatar",
+    "caption": "Ficção Científica",
+    "short_description": "Um épico de ficção científica em um mundo alienígena visualmente deslumbrante.",
+    "description": "No planeta Pandora, um ex-fuzileiro paraplégico é enviado em uma missão para interagir com os Na’vi, habitantes locais, e acaba dividido entre seguir ordens humanas ou defender aquele novo mundo que ele aprende a amar.",
+    "rating": 4.9,
+    "price": 25,
+    "year": 2009
   },
   {
-    "title": "Filme Exemplo 2",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 2,
-    "price": 10
+    "title": "Cidade de Deus",
+    "src": "/images/movies/filme1.jpg",
+    "alt": "Filme: Cidade de Deus",
+    "caption": "Drama / Crime",
+    "short_description": "Um retrato intenso da vida nas favelas do Rio de Janeiro.",
+    "description": "Baseado em fatos reais, o filme acompanha a ascensão do crime organizado na favela Cidade de Deus, mostrando a trajetória de jovens que cresceram cercados pela violência e a busca por um destino diferente.",
+    "rating": 4.8,
+    "price": 27,
+    "year": 2002
   },
   {
-    "title": "Filme Exemplo 3",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 3,
-    "price": 10
+    "title": "Doutor Estranho",
+    "src": "/images/movies/filme3.jpg",
+    "alt": "Filme: Doutor Estranho",
+    "caption": "Ação / Fantasia",
+    "short_description": "Um cirurgião se torna o protetor das dimensões mágicas do universo.",
+    "description": "Após um terrível acidente, o arrogante cirurgião Stephen Strange busca cura nas artes místicas e descobre um novo propósito como o mago supremo, responsável por proteger o mundo de ameaças interdimensionais.",
+    "rating": 4.8,
+    "price": 15,
+    "year": 2016
   },
   {
-    "title": "Filme Exemplo 4",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
+    "title": "Harry Potter e a Ordem da Fênix",
+    "src": "/images/movies/filme4.jpg",
+    "alt": "Filme: Harry Potter e a Ordem da Fênix",
+    "caption": "Fantasia / Aventura",
+    "short_description": "Harry enfrenta o retorno de Voldemort e a resistência de Hogwarts.",
+    "description": "Enquanto o Ministério da Magia tenta esconder o retorno de Voldemort, Harry e seus amigos formam a Armada de Dumbledore para se preparar para a guerra que se aproxima e enfrentar Dolores Umbridge, a nova professora tirana.",
+    "rating": 4.7,
+    "price": 18,
+    "year": 2007
+  },
+  {
+    "title": "Pokemon Mewtwo x Mew",
+    "src": "/images/movies/filme5.jpg",
+    "alt": "Filme: Pokemon Mewtwo x Mew",
+    "caption": "Animação / Aventura",
+    "short_description": "O confronto lendário entre Mewtwo e Mew.",
+    "description": "Criado a partir do DNA de Mew, o poderoso Mewtwo se rebela contra seus criadores e desafia os humanos e Pokémon em busca de seu propósito, levando Ash e seus amigos a uma batalha épica entre a criação e o original.",
+    "rating": 4.9,
+    "price": 21,
+    "year": 1998
+  },
+  {
+    "title": "Sonic 3",
+    "src": "/images/movies/filme6.jpg",
+    "alt": "Filme: Sonic 3",
+    "caption": "Aventura / Comédia",
+    "short_description": "Sonic retorna para mais uma aventura eletrizante.",
+    "description": "Sonic e seus amigos Tails e Knuckles enfrentam uma nova ameaça que coloca o planeta em risco. Com muita velocidade, humor e ação, o ouriço azul precisa mais uma vez salvar o dia e provar o verdadeiro significado de heroísmo.",
+    "rating": 4.5,
+    "price": 27,
+    "year": 2024
+  },
+  {
+    "title": "Tarzan",
+    "src": "/images/movies/filme7.jpg",
+    "alt": "Filme: Tarzan",
+    "caption": "Animação / Aventura",
+    "short_description": "Um homem criado por gorilas descobre suas origens humanas.",
+    "description": "Após perder seus pais na selva, Tarzan é criado por uma família de gorilas. Quando humanos chegam à floresta, ele precisa escolher entre o mundo que conhece e aquele de onde veio, enfrentando dilemas sobre identidade e pertencimento.",
     "rating": 4,
-    "price": 10
+    "price": 10,
+    "year": 1999
   },
   {
-    "title": "Filme Exemplo 5",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "Aquaman 2: O Reino Perdido",
+    "src": "/images/movies/filme8.jpg",
+    "alt": "Filme: Aquaman 2: O Reino Perdido",
+    "caption": "Ação / Fantasia",
+    "short_description": "Aquaman enfrenta um antigo inimigo para proteger Atlântida e sua família.",
+    "description": "Arthur Curry precisa unir forças com seu irmão Orm para deter o vilão Arraia Negra, que busca vingança e ameaça destruir Atlântida com um poder ancestral. Uma jornada épica sob as águas repleta de ação e emoção.",
+    "rating": 3.8,
+    "price": 28,
+    "year": 2023
   },
   {
-    "title": "Filme Exemplo 6",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "Capitão América: Admirável Mundo Novo",
+    "src": "/images/movies/filme9.jpg",
+    "alt": "Filme: Capitão América: Admirável Mundo Novo",
+    "caption": "Ação / Super-herói",
+    "short_description": "Sam Wilson assume o escudo e enfrenta novos desafios globais.",
+    "description": "Agora como Capitão América, Sam Wilson precisa lidar com conspirações políticas e ameaças que testam seus valores enquanto busca unir o mundo em tempos de divisão e incerteza.",
+    "rating": 4.8,
+    "price": 31,
+    "year": 2025
   },
   {
-    "title": "Filme Exemplo 7",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "Larissa Manoela: Meus 15 Anos",
+    "src": "/images/movies/filme10.jpg",
+    "alt": "Filme: Larissa Manoela: Meus 15 Anos",
+    "caption": "Comédia / Família",
+    "short_description": "Uma adolescente tímida tem sua vida transformada ao completar 15 anos.",
+    "description": "Bia é uma garota comum que vê seu aniversário de 15 anos se transformar em uma festa dos sonhos. Entre confusões e descobertas, ela aprende o valor da amizade e da autoconfiança.",
+    "rating": 5,
+    "price": 23,
+    "year": 2017
   },
   {
-    "title": "Filme Exemplo 8",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "Onze Homens e um Segredo",
+    "src": "/images/movies/filme11.jpg",
+    "alt": "Filme: Onze Homens e um Segredo",
+    "caption": "Crime / Suspense",
+    "short_description": "Um grupo de ladrões planeja o maior assalto de Las Vegas.",
+    "description": "Danny Ocean reúne uma equipe de especialistas para roubar três cassinos de Las Vegas ao mesmo tempo. Um filme cheio de estilo, inteligência e reviravoltas brilhantes.",
+    "rating": 4.4,
+    "price": 32,
+    "year": 2001
   },
   {
-    "title": "Filme Exemplo 9",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "Marley e Eu",
+    "src": "/images/movies/filme12.jpg",
+    "alt": "Filme: Marley e Eu",
+    "caption": "Comédia / Drama",
+    "short_description": "A emocionante história de um casal e seu adorável cachorro.",
+    "description": "John e Jenny adotam Marley, um labrador travesso que transforma suas vidas com amor, caos e lições inesquecíveis sobre família e perda.",
+    "rating": 4.9,
+    "price": 23,
+    "year": 2008
   },
   {
-    "title": "Filme Exemplo 10",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
+    "title": "O Diabo Veste Prada",
+    "src": "/images/movies/filme13.jpg",
+    "alt": "Filme: O Diabo Veste Prada",
+    "caption": "Comédia / Drama",
+    "short_description": "Uma jovem jornalista enfrenta o mundo da moda e uma chefe implacável.",
+    "description": "Andy Sachs consegue um emprego na renomada revista Runway e precisa lidar com a exigente editora Miranda Priestly enquanto descobre o custo de seguir seus sonhos.",
+    "rating": 4.9,
+    "price": 26,
+    "year": 2006
   },
   {
-    "title": "Filme Exemplo 11",
-    "src": "https://placehold.co/150",
-    "caption": "Poster do filme",
-    "description": "Descrição do filme",
-    "rating": 4,
-    "price": 10
-  }
+      "title": "Edward Mãos de Tesoura",
+      "src": "/images/movies/filme14.jpg",
+      "alt": "Filme: Edward Mãos de Tesoura",
+      "caption": "Fantasia / Romance / Drama",
+      "short_description": "Um homem com tesouras no lugar das mãos tenta se adaptar ao mundo real.",
+      "description": "Criado por um inventor que morreu antes de terminá-lo, Edward vive isolado até ser descoberto e levado para uma comunidade suburbana, onde tenta encontrar seu lugar no mundo.",
+      "rating": 4.8,
+      "price": 26,
+      "year": 1990
+    },
+    {
+      "title": "Wicked",
+      "src": "/images/movies/filme15.jpg",
+      "alt": "Filme: Wicked",
+      "caption": "Fantasia / Musical",
+      "short_description": "A história não contada das bruxas de Oz antes da chegada de Dorothy.",
+      "description": "Antes de Dorothy, havia Elphaba, uma jovem incompreendida por sua pele verde e um coração puro. Sua amizade com Glinda e os acontecimentos que moldaram a Bruxa Má do Oeste são revelados neste musical mágico.",
+      "rating": 4.7,
+      "price": 28,
+      "year": 2024
+    },
+    {
+      "title": "Hereditário",
+      "src": "/images/movies/filme16.jpg",
+      "alt": "Filme: Hereditário",
+      "caption": "Terror / Suspense / Drama",
+      "short_description": "Uma família descobre segredos sombrios após a morte da matriarca.",
+      "description": "Após o falecimento da avó, uma família começa a desvendar mistérios terríveis sobre sua linhagem, mergulhando em eventos paranormais e aterrorizantes.",
+      "rating": 4.9,
+      "price": 27,
+      "year": 2018
+    },
+    {
+      "title": "O Telefone Preto",
+      "src": "/images/movies/filme17.jpg",
+      "alt": "Filme: O Telefone Preto",
+      "caption": "Terror / Suspense",
+      "short_description": "Um garoto sequestrado recebe ajuda de vítimas anteriores através de um telefone desconectado.",
+      "description": "Finney Shaw é sequestrado por um assassino e trancado em um porão com um telefone desconectado — que misteriosamente começa a tocar com vozes de suas vítimas anteriores.",
+      "rating": 4.6,
+      "price": 25,
+      "year": 2021
+    },
+    {
+      "title": "Midsommar",
+      "src": "/images/movies/filme18.jpg",
+      "alt": "Filme: Midsommar",
+      "caption": "Terror / Drama / Mistério",
+      "short_description": "Um casal participa de um festival sueco que rapidamente se torna perturbador.",
+      "description": "Após uma tragédia pessoal, Dani acompanha seu namorado e amigos a um festival sueco que acontece a cada 90 anos. O que começa como uma viagem tranquila se transforma em um pesadelo ritualístico.",
+      "rating": 4.8,
+      "price": 27,
+      "year": 2019
+    }
+
 ]

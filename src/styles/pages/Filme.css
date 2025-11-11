@@ -34,7 +34,7 @@
   }
 
   .movie-detail-rating {
-    @apply font-medium text-(--color-accent-secondary);
+    @apply font-medium text-(--color-accent-quaternary);
   }
 
   .movie-detail-desc {
@@ -46,7 +46,7 @@
   }
 
   .movie-detail-price {
-    @apply font-semibold text-(--color-accent-primary);
+    @apply font-semibold text-(--color-accent-quaternary);
   }
 
   .movie-detail-actions {

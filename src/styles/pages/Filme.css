@@ -54,6 +54,6 @@
   }
 
   .movie-detail-btn {
-    @apply px-4 py-2 rounded-md border border-(--color-accent-primary) text-(--color-accent-primary) hover:bg-(--color-accent-primary) hover:text-black transition-all duration-200;
+    @apply px-4 font-bold py-2 rounded-md border border-(--color-accent-primary) text-(--color-accent-primary) hover:bg-(--color-accent-primary) hover:text-black transition-all duration-200;
   }
 }

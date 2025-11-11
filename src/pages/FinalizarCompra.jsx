@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/pages/FinalizarCompra.css";
 
 function FinalizarCompra() {
@@ -9,17 +10,11 @@ function FinalizarCompra() {
           <p className="confirmation-msg">
             Obrigado pela sua compra. Seu pedido foi processado com sucesso.
           </p>
-          <p className="order-details">
-            Resumo: itens comprados, total e dados de entrega.
-          </p>
+          <p className="order-details"></p>
 
-          <a className="finalize-btn" href="/">
+          <Link to={"/"} className="finalize-btn">
             Voltar para início
-          </a>
-
-          <a className="back-link" href="/catalogo">
-            Ver catálogo de filmes
-          </a>
+          </Link>
         </section>
       </div>
     </main>

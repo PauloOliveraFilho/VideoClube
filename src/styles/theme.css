@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  /* Default to dark if no data-theme is set */
-  --color-bg: #000000;
-  --color-text: #ffffff;
+  --color-bg: #1d1d1e;
+  --color-text: #c5c2ca;
 
   --color-accent-primary: #3b82f6;
   --color-accent-secondary: #22c55e;
@@ -16,10 +15,9 @@
   --item-text: rgba(255, 255, 255, 0.7);
 }
 
-/* Dark theme variables */
 :root[data-theme="dark"] {
-  --color-bg: #000000;
-  --color-text: #ffffff;
+  --color-bg: #1d1d1e;
+  --color-text: #c5c2ca;
 
   --color-accent-primary: #3b82f6;
   --color-accent-secondary: #22c55e;
@@ -32,10 +30,9 @@
   --item-text: rgba(255, 255, 255, 0.7);
 }
 
-/* Light theme variables */
 :root[data-theme="light"] {
-  --color-bg: #ffffff;
-  --color-text: #111111;
+  --color-bg: #c5c2ca;
+  --color-text: #1d1d1e;
 
   --color-accent-primary: #2563eb;
   --color-accent-secondary: #16a34a;

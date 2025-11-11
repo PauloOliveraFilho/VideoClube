@@ -1,4 +1,5 @@
-[
+{
+  "slides": [
     {
       "src": "/images/movies/filme0.jpg",
       "alt": "Filme em destaque: Avatar"
@@ -31,4 +32,6 @@
       "src": "/images/movies/filme15.jpg",
       "alt": "Filme em destaque: Wicked"
     }
-]
+
+  ]
+}

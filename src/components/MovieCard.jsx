@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "../styles/components/MovieCard.css";
 import { Link } from "react-router-dom";
+import moviesData from "../data/moviesData.json";
 import formatPrice from "../utils/money.js";
 
 function getItemsPerPage() {
   if (typeof window === "undefined") return 9;
   const w = window.innerWidth;
-  if (w < 640) return 2;
+  if (w < 640) return 2; 
   if (w < 1024) return 6;
   return 9;
 }
 
-function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
-  const [moviesState, setMoviesState] = useState(moviesProp);
+function MovieCard({ searchQuery = "" }) {
+  const [movies] = useState(moviesData);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
 
@@ -22,18 +23,13 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
       setItemsPerPage(newCount);
     }
     window.addEventListener("resize", handleResize);
-
+    
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    setMoviesState(moviesProp ?? moviesDataFallback);
-    setCurrentPage(1);
-  }, [moviesProp]);
-
-  const filteredMovies = (moviesState ?? []).filter((movie) =>
-    (movie.title || "").toLowerCase().includes((searchQuery || "").toLowerCase())
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes((searchQuery || "").toLowerCase())
   );
 
   const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
@@ -63,7 +59,7 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
       <div className="movies-grid">
         {paginatedMovies.length > 0 ? (
           paginatedMovies.map((movie, idx) => {
-            const globalIndex = startIndex + idx;
+            const globalIndex = startIndex + idx; // <-- usa índice global
             return (
               <Link
                 to={`/Detalhes do Filme/${globalIndex}`}

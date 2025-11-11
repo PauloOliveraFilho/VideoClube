@@ -1,12 +1,11 @@
 import "../styles/components/Header.css";
 import { BsFillSunFill, BsFillMoonFill, BsList, BsX } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useAuth } from "../context/AuthContext";
 
 function Header() {
   const [theme, setTheme] = useState(() => {
-    const current = typeof document !== "undefined" ? document.documentElement.dataset.theme : "dark";
+    const current = document.documentElement.dataset.theme;
     return current === "light" || current === "dark" ? current : "dark";
   });
 
@@ -30,25 +29,6 @@ function Header() {
 
   const closeMobile = () => setMobileOpen(false);
   const toggleMobile = () => setMobileOpen((s) => !s);
-
-  // auth
-  const auth = useAuth();
-  const user = auth?.user ?? null;
-  const signOut = auth?.signOut;
-  const navigate = useNavigate();
-
-  const handleSignOut = async () => {
-    try {
-      if (typeof signOut === "function") {
-        await signOut();
-      }
-    } catch (err) {
-      console.error("Erro ao sair:", err);
-    } finally {
-      closeMobile();
-      navigate("/");
-    }
-  };
 
   return (
     <header className="site-header">
@@ -82,19 +62,9 @@ function Header() {
               </Link>
             </li>
             <li>
-              {user ? (
-                <button
-                  className="header-link header-logout"
-                  onClick={handleSignOut}
-                  type="button"
-                >
-                  Sair
-                </button>
-              ) : (
-                <Link to={"/Login"} className="header-link" onClick={closeMobile}>
-                  Entrar
-                </Link>
-              )}
+              <Link to={"/Login"} className="header-link" onClick={closeMobile}>
+                Entrar
+              </Link>
             </li>
           </ul>
 
@@ -147,18 +117,9 @@ function Header() {
             </Link>
           </li>
           <li>
-            {user ? (
-              <Link to={"/"}
-                className="mobile-link mobile-logout"
-                onClick={handleSignOut}
-              >
-                Sair
-              </Link>
-            ) : (
-              <Link to={"/Login"} className="mobile-link" onClick={closeMobile}>
-                Entrar
-              </Link>
-            )}
+            <Link to={"/Login"} className="mobile-link" onClick={closeMobile}>
+              Entrar
+            </Link>
           </li>
           <li>
             <button

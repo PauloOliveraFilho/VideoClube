@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @layer components {
+  /* Header root */
   .site-header {
     @apply fixed top-0 left-0 z-50 w-full bg-(--color-bg) border-b border-b-(--surface-border) shadow-md;
   }
@@ -59,10 +60,6 @@
 
   .mobile-link {
     @apply block px-4 py-2 rounded hover:bg-(--surface-hover) text-(--color-text) no-underline;
-  }
-
-  .mobile-logout {
-    @apply cursor-pointer;
   }
 
   .mobile-theme-btn {

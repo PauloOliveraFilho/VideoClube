@@ -9,4 +9,8 @@ O projeto oferece uma experiência fluida e moderna, permitindo navegar por gên
 
 🎨 CSS / Tailwind para estilização
 
+ChatGpt, Gemini - para auxílio na programação e modelagem das páginas
+
 Desenvolvido por Paulo Marcondes
+
+Observação: Esse é um projeto de faculdade, não possui funcionalidade real e não será continuado pós entrega do projeto.

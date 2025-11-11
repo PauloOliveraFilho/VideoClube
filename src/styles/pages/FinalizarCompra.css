@@ -2,7 +2,7 @@
 
 @layer base {
   .finalizar-page {
-    @apply min-h-screen pt-18 pb-24 text-(--color-text) bg-(--color-bg) flex items-center justify-center px-4;
+    @apply min-h-screen pt-18 pb-24 text-(--color-text) flex items-center justify-center px-4;
   }
 
   .finalizar-container {
@@ -10,7 +10,7 @@
   }
 
   .confirmation-card {
-    @apply bg-(--surface) border border-(--surface-border) rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl text-center md:text-left md:pl-10 md:pr-10;
+    @apply bg-(--color-bg) border border-(--surface-border) rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl text-center md:text-left md:pl-10 md:pr-10;
     max-width: 100%;
   }
 
@@ -30,14 +30,10 @@
   }
 
   .finalize-btn {
-    @apply block w-full md:inline-block md:w-auto px-6 py-2 bg-(--color-accent-primary) text-white rounded-lg shadow hover:opacity-95 transition text-center;
+    @apply block font-bold w-full md:inline-block md:w-auto px-6 py-2 bg-(--color-accent-primary) text-(--color-text) rounded-lg shadow hover:opacity-95 transition text-center;
   }
 
-  .back-link {
-    @apply block mt-3 w-full md:inline-block md:mt-0 md:ml-4 text-(--color-accent-primary) hover:underline text-center;
-  }
-
-  .finalize-btn + .back-link {
+  .finalize-btn {
     @apply mt-3 md:mt-0;
   }
 }

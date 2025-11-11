@@ -177,7 +177,7 @@ function ComprarTicket() {
           </div>
 
           <div className="ticket-actions">
-            <Link to={`/Finalizar Compra/${id}`} className="ticket-btn">
+            <Link to={`/Finalizar Compra`} className="ticket-btn">
               Prosseguir
             </Link>
           </div>

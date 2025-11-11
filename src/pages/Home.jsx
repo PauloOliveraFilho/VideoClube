@@ -1,15 +1,46 @@
 import "../styles/pages/Home.css";
-import { slides } from "../data/carouselData.json";
+import localMovies from "../data/moviesData.json";
+import localCarousel from "../data/carouselData.json";
 import Carousel from "../components/Carousel";
 import MovieCard from "../components/MovieCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { supabase } from "../data/supabaseClient";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
+  const localSlides = Array.isArray(localCarousel)
+    ? localCarousel
+    : localCarousel.slides ?? [];
+  const [slides, setSlides] = useState(localSlides);
+  const [movies, setMovies] = useState(localMovies ?? []);
+
+  // ...existing code...
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const { data: slidesData, error: slidesError } = await supabase
+          .from("destaque")
+          .select("*");
+        if (!slidesError && slidesData && slidesData.length) {
+          setSlides(slidesData);
+        } else {
+          setSlides(localSlides);
+        }
+      } catch (err) {
+        console.error("Erro ao carregar slides:", err);
+        setSlides(localSlides);
+      }
+
+    };
+
+    load();
+  }, []);
+
   function handleSearchChange(e) {
     setSearchQuery(e.target.value);
   }
+
   return (
     <main className="home-page">
       <div className="home-container">
@@ -34,7 +65,7 @@ function Home() {
           />
         </section>
 
-        <MovieCard searchQuery={searchQuery} />
+        <MovieCard searchQuery={searchQuery} movies={movies} />
       </div>
     </main>
   );

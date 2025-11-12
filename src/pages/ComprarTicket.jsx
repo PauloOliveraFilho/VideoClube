@@ -104,6 +104,7 @@ function ComprarTicket() {
 
           <div className="ticket-seats">
             <button
+              title="Escolher o assento"
               ref={seatToggleRef}
               type="button"
               className="seat-toggle-btn"
@@ -139,6 +140,7 @@ function ComprarTicket() {
                         }`;
                         return (
                           <button
+                            title="selecionar assento"
                             type="button"
                             key={seatId}
                             className={cls}

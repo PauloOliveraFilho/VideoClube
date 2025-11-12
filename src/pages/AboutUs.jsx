@@ -25,7 +25,12 @@ function AboutUs() {
       <section className="about-team">
         <h2 className="section-title">Equipe</h2>
         <div className="team-grid">
-          <Card name="Paulo Marcondes" description="Estudante de ADS" alt="Foto de Paulo" imageUrl="/images/team/PauloF.jpg" />
+          <Card
+            name="Paulo Marcondes"
+            description="Estudante de ADS"
+            alt="Foto de Paulo"
+            imageUrl="/images/team/PauloF.jpg"
+          />
         </div>
       </section>
 
@@ -33,7 +38,7 @@ function AboutUs() {
         <h2 className="section-title">Contato</h2>
         <p>
           Tem sugestões ou precisa de suporte? Envie um email para{" "}
-          <a href="mailto:contato@videoclube">VideoClube@gmail.com</a>
+          <span>VideoClube@gmail.com</span>
         </p>
       </section>
     </main>

@@ -126,7 +126,12 @@ function Cadastrar() {
           )}
 
           <div className="form-group">
-            <button className="btn-primary" type="submit" disabled={loading}>
+            <button
+              title="Cadastrar-se"
+              className="btn-primary"
+              type="submit"
+              disabled={loading}
+            >
               {loading ? "Cadastrando..." : "Cadastrar"}
             </button>
           </div>

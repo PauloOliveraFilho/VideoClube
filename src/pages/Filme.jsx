@@ -11,12 +11,12 @@ function Filme() {
   const getMovieByParam = (param) => {
     if (param == null) return undefined;
     const decoded = decodeURIComponent(param);
-    
+
     if (/^\d+$/.test(decoded)) {
       const idx = Number(decoded);
       return moviesData[idx];
     }
-    
+
     const lower = decoded.toLowerCase();
     return moviesData.find(
       (m) =>
@@ -33,7 +33,11 @@ function Filme() {
         <section className="movie-detail-section">
           <h3 className="movie-detail-title">Filme não encontrado</h3>
           <div className="movie-detail-actions">
-            <button onClick={() => navigate(-1)} className="movie-detail-btn">
+            <button
+              title="Voltar"
+              onClick={() => navigate(-1)}
+              className="movie-detail-btn"
+            >
               Voltar
             </button>
           </div>

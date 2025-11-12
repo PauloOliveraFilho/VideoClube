@@ -42,7 +42,7 @@
   }
 
   .pagination-btn {
-    @apply px-4 py-2 bg-(--color-accent-primary) text-(--color-text) border-none rounded-md cursor-pointer text-base transition-colors duration-300;
+    @apply px-4 font-bold py-2 bg-(--color-accent-primary)/80 text-(--color-text) border-none rounded-md cursor-pointer text-base transition-colors duration-300;
   }
 
   .pagination-btn:hover:not(:disabled) {
@@ -50,7 +50,7 @@
   }
 
   .pagination-btn:disabled {
-    @apply bg-(--color-muted) cursor-not-allowed;
+    @apply bg-(--color-muted)/40 border border-(--color-border) text-(--color-text) cursor-not-allowed;
   }
 
   .pagination-numbers {
@@ -58,11 +58,11 @@
   }
 
   .pagination-number {
-    @apply px-3 py-2 bg-(--surface) border border-(--color-border) rounded-md cursor-pointer transition-all duration-300;
+    @apply px-3 font-bold text-(--color-text) py-2 bg-(--color-bg) border border-(--color-border) rounded-md cursor-pointer transition-all duration-300;
   }
 
   .pagination-number:hover {
-    @apply bg-(--color-muted);
+    @apply bg-(--color-bg) text-(--color-text) border-(--color-accent-primary);
   }
 
   .pagination-number.active {

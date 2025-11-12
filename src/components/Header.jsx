@@ -6,7 +6,10 @@ import { useAuth } from "../context/AuthContext";
 
 function Header() {
   const [theme, setTheme] = useState(() => {
-    const current = typeof document !== "undefined" ? document.documentElement.dataset.theme : "dark";
+    const current =
+      typeof document !== "undefined"
+        ? document.documentElement.dataset.theme
+        : "dark";
     return current === "light" || current === "dark" ? current : "dark";
   });
 
@@ -60,7 +63,11 @@ function Header() {
             aria-label="Página inicial"
             onClick={closeMobile}
           >
-            <img className="brand-mark" src="/icons/logo.jpg" alt="Logo VC"></img>
+            <img
+              className="brand-mark"
+              src="/icons/logo.jpg"
+              alt="Logo VC"
+            ></img>
             <span className="brand-name">VideoClube</span>
           </Link>
         </div>
@@ -84,6 +91,7 @@ function Header() {
             <li>
               {user ? (
                 <button
+                  title="Desconectar"
                   className="header-link header-logout"
                   onClick={handleSignOut}
                   type="button"
@@ -91,7 +99,12 @@ function Header() {
                   Sair
                 </button>
               ) : (
-                <Link to={"/Login"} className="header-link" onClick={closeMobile}>
+                <Link
+                  title="Conectar"
+                  to={"/Login"}
+                  className="header-link"
+                  onClick={closeMobile}
+                >
                   Entrar
                 </Link>
               )}
@@ -113,6 +126,7 @@ function Header() {
           </button>
 
           <button
+            title="Abrir menu do header"
             className="mobile-menu-btn"
             aria-controls="mobile-menu"
             aria-expanded={mobileOpen}
@@ -139,6 +153,7 @@ function Header() {
           </li>
           <li>
             <Link
+              title="Ver mais sobre nós"
               to={"/Sobre nós"}
               className="mobile-link"
               onClick={closeMobile}
@@ -148,7 +163,8 @@ function Header() {
           </li>
           <li>
             {user ? (
-              <Link to={"/"}
+              <Link
+                to={"/"}
                 className="mobile-link mobile-logout"
                 onClick={handleSignOut}
               >
@@ -162,6 +178,7 @@ function Header() {
           </li>
           <li>
             <button
+              title="Trocar de tema"
               className="mobile-theme-btn"
               onClick={() => {
                 toggleTheme();

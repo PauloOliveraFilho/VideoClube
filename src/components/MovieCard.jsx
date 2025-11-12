@@ -13,7 +13,9 @@ function getItemsPerPage() {
 }
 
 function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
-  const [moviesState, setMoviesState] = useState(moviesProp ?? moviesDataFallback);
+  const [moviesState, setMoviesState] = useState(
+    moviesProp ?? moviesDataFallback
+  );
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
 
@@ -45,10 +47,16 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
       .includes((searchQuery || "").toLowerCase())
   );
 
-  const totalPages = Math.max(1, Math.ceil(filteredWrapped.length / itemsPerPage));
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredWrapped.length / itemsPerPage)
+  );
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-  const paginatedWrapped = filteredWrapped.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedWrapped = filteredWrapped.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage((p) => p + 1);
@@ -81,7 +89,11 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
                 <article className="movie-card">
                   <h3 className="movie-title">{movie.title}</h3>
                   <figure>
-                    <img src={movie.src} alt={movie.alt} className="movie-poster" />
+                    <img
+                      src={movie.src}
+                      alt={movie.alt}
+                      className="movie-poster"
+                    />
                     <figcaption>{movie.caption}</figcaption>
                   </figure>
                   <p className="movie-desc">{movie.short_description}</p>
@@ -101,6 +113,7 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
       {filteredWrapped.length > 0 && totalPages > 1 && (
         <div className="pagination">
           <button
+            title="Voltar para página anterior"
             className="pagination-btn"
             onClick={handlePreviousPage}
             disabled={currentPage === 1}
@@ -112,6 +125,7 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(
               (pageNumber) => (
                 <button
+                  title="Selecionar página"
                   key={pageNumber}
                   className={`pagination-number ${
                     currentPage === pageNumber ? "active" : ""
@@ -125,6 +139,7 @@ function MovieCard({ searchQuery = "", movies: moviesProp = null }) {
           </div>
 
           <button
+            title="Ir para a próxima pagina"
             className="pagination-btn"
             onClick={handleNextPage}
             disabled={currentPage === totalPages}

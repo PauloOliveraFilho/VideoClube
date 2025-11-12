@@ -81,6 +81,7 @@ function Header() {
             </li>
             <li>
               <Link
+                title="Descubra mais sobre nós"
                 to={"/Sobre nós"}
                 className="header-link"
                 onClick={closeMobile}

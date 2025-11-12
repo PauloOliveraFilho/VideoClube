@@ -64,6 +64,7 @@ function Header() {
             onClick={closeMobile}
           >
             <img
+              title="Seu cinema online"
               className="brand-mark"
               src="/icons/logo.jpg"
               alt="Logo VC"
@@ -75,7 +76,12 @@ function Header() {
         <nav aria-label="Navegação principal" className="header-right">
           <ul className="header-options">
             <li>
-              <Link to={"/"} className="header-link" onClick={closeMobile}>
+              <Link
+                title="Voltar para página principal"
+                to={"/"}
+                className="header-link"
+                onClick={closeMobile}
+              >
                 Home
               </Link>
             </li>
@@ -148,13 +154,18 @@ function Header() {
       >
         <ul>
           <li>
-            <Link to={"/"} className="mobile-link" onClick={closeMobile}>
+            <Link
+              title="Voltar para página principal"
+              to={"/"}
+              className="mobile-link"
+              onClick={closeMobile}
+            >
               Home
             </Link>
           </li>
           <li>
             <Link
-              title="Ver mais sobre nós"
+              title="Descubra mais sobre nós"
               to={"/Sobre nós"}
               className="mobile-link"
               onClick={closeMobile}
@@ -165,6 +176,7 @@ function Header() {
           <li>
             {user ? (
               <Link
+                title="Desconectar"
                 to={"/"}
                 className="mobile-link mobile-logout"
                 onClick={handleSignOut}
@@ -172,7 +184,12 @@ function Header() {
                 Sair
               </Link>
             ) : (
-              <Link to={"/Login"} className="mobile-link" onClick={closeMobile}>
+              <Link
+                title="Conectar"
+                to={"/Login"}
+                className="mobile-link"
+                onClick={closeMobile}
+              >
                 Entrar
               </Link>
             )}
